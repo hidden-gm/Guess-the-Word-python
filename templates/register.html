@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-page compact">
+  <div class="auth-intro">
+    <div class="eyebrow">/ NEW PLAYER</div>
+    <h1>Build your<br><em>word log.</em></h1>
+    <p>Your history is saved round by round. Login later and continue from where you left off during the day.</p>
+    <div class="rule-list"><span>01</span> USERNAME · LETTERS ONLY · 5+<span>02</span> PASSWORD · LETTER + NUMBER + $ % *<span>03</span> MAX · 3 GAMES / DAY</div>
+  </div>
+  <form class="auth-card" id="registerForm">
+    <div class="card-top"><span>PLAYER REGISTRY</span><span>NEW</span></div>
+    <label>USERNAME<input id="username" name="username" autocomplete="username" placeholder="playerone" required></label>
+    <label>PASSWORD<input id="password" name="password" type="password" autocomplete="new-password" placeholder="Alpha9*" required></label>
+    <div class="requirements">Password needs letters, a number, and one of <b>$ % *</b>.</div>
+    <div id="error" class="error-box" hidden></div>
+    <button class="primary-btn" id="submitButton">CREATE PLAYER ↗</button>
+    <p class="subtle">Already registered? <a href="/login">Return to access</a></p>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}<script src="/static/js/register.js"></script>{% endblock %}
