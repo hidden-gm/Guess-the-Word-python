@@ -1,9 +1,0 @@
-services:
-  web:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      DJANGO_SECRET_KEY: change-this-django-secret-before-production
-      APP_JWT_SECRET: change-this-secret-before-production-use-please-very-long
-    restart: unless-stopped
