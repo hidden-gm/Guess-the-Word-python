@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-page">
+  <div class="auth-intro">
+    <div class="eyebrow">/ ACCESS NODE 01</div>
+    <h1>Read the pattern.<br><em>Crack the word.</em></h1>
+    <p>Five letters. Five tries. Three rounds per day. A clean guessing game with a little terminal energy.</p>
+    <div class="signal-row"><span class="signal green"></span> EXACT <span class="signal orange"></span> PRESENT <span class="signal grey"></span> ABSENT</div>
+  </div>
+  <form class="auth-card" id="loginForm">
+    <div class="card-top"><span>WORD//TRACE</span><span>LOGIN</span></div>
+    <label>USERNAME<input id="username" name="username" autocomplete="username" placeholder="yourname" required></label>
+    <label>PASSWORD<input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required></label>
+    <div id="error" class="error-box" hidden></div>
+    <button class="primary-btn" id="submitButton">ENTER THE GRID ↗</button>
+    <p class="subtle">New player? <a href="/register">Create a player account</a></p>
+    <div class="demo-note">ADMIN DEMO<br><b>admin</b> / <b>Admin1*</b></div>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}<script src="/static/js/login.js"></script>{% endblock %}
